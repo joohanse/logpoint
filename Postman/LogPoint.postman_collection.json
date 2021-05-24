@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "ea6eb0fc-756c-4dfe-8a44-f1dbc764e5c8",
+		"name": "LogPoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search API",
+			"item": [
+				{
+					"name": "GetAllowedData",
+					"item": [
+						{
+							"name": "TimeZone",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "user_preference",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getalloweddata",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getalloweddata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Repos",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "logpoint_repos",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getalloweddata",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getalloweddata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logpoints",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "loginspects",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getalloweddata",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getalloweddata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Devices",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "devices",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getalloweddata",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getalloweddata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Livesearches",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "livesearches",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getalloweddata",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getalloweddata"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GetSearchLogs",
+					"item": [
+						{
+							"name": "Joon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "user_preference",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getsearchlogs?username={{username}}&secret_key={{secret_key}}&requestData={\"query\": \"|chart count() by device_ip\",\n                \"time_range\": \"Last 24 hours\",\n                \"limit\": 100,\n                \"repos\": [\"127.0.0.1:5504/_logpoint\"]}",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getsearchlogs"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "{{username}}"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}"
+										},
+										{
+											"key": "requestData",
+											"value": "{\"query\": \"|chart count() by device_ip\",\n                \"time_range\": \"Last 24 hours\",\n                \"limit\": 100,\n                \"repos\": [\"127.0.0.1:5504/_logpoint\"]}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Query",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "{{username}}",
+											"type": "text"
+										},
+										{
+											"key": "secret_key",
+											"value": "{{secret_key}}",
+											"type": "text"
+										},
+										{
+											"key": "requestData",
+											"value": "{\n                \"query\": \"|chart count() by device_ip\",\n                \"time_range\": \"Last 24 hours\",\n                \"limit\": 100,\n                \"repos\": [\"127.0.0.1:5504/_logpoint\"]\n                        }",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://{{logpoint_server}}/getsearchlogs",
+									"protocol": "https",
+									"host": [
+										"{{logpoint_server}}"
+									],
+									"path": [
+										"getsearchlogs"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Incident API",
+			"item": [
+				{
+					"name": "Joon",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "secret_key",
+									"value": "{{secret_key}}",
+									"type": "text"
+								},
+								{
+									"key": "requestData",
+									"value": "{\n                \"version\": \"0.1\",\n                \"ts_from\": 1516420000,\n                \"ts_to\": 1516430000\n                }",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{logpoint_server}}/incidents",
+							"protocol": "https",
+							"host": [
+								"{{logpoint_server}}"
+							],
+							"path": [
+								"incidents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incidents",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "{{username}}",
+									"type": "text"
+								},
+								{
+									"key": "secret_key",
+									"value": "{{secret_key}}",
+									"type": "text"
+								},
+								{
+									"key": "requestData",
+									"value": "{\n                \"version\": \"0.1\",\n                \"ts_from\": 1516420000,\n                \"ts_to\": 1516430000\n                }",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://{{logpoint_server}}/incidents",
+							"protocol": "https",
+							"host": [
+								"{{logpoint_server}}"
+							],
+							"path": [
+								"incidents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
